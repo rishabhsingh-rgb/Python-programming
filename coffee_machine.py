@@ -145,6 +145,22 @@ def cappuccino_():
 def report():
     print(f"\nMilk:- {milk}ml\nMilk-Foam:- {milk_foam}ml\nCoffee:- {coffee}gm\nSugar:- {sugar}gm")           
     print(f"Money collected:- {money}Rs\nProfit:- {profit}Rs\n")
+
+def add():
+    global milk
+    global coffee
+    global milk_foam
+    global sugar
+    milk1=int(input("\nHow much milk to add(in ml):- "))
+    coffee1=int(input("How much coffee to add(in gm):- "))
+    sugar1=int(input("How much sugar to add(im gm):- "))
+    milk_foam1=int(input("How much milk-foam to add(in ml):- "))
+    milk+=milk1
+    coffee+=coffee1
+    milk_foam+=milk_foam1
+    sugar+=sugar1
+    print("\nIngredients added successfully.\n")
+
 while True:
     print("Coffee:- 80Rs\nLatte:- 150Rs\nCappuccino:- 120Rs\n")
     choice=input("What would you like to have?").lower()
@@ -156,8 +172,10 @@ while True:
         cappuccino_()
     elif choice=="report":
         report()
+    elif choice=="add":
+        add()    
     elif choice=="off":
         print("Machine turned off!!\n")
         sys.exit(0)
     else:
-        print("Sorry this option is not available!!\n")
+        print("Sorry this option is not available!!\n")    
