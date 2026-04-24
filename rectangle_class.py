@@ -7,6 +7,6 @@ class rectangle:
     def perimeter(self):
         return 2*(self.l+self.b)
 
-r1=reactangle(4,6)
+r1=rectangle(4,6)
 print(r1.area())
 print(r1.perimeter())     
